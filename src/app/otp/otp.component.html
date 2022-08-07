@@ -1,0 +1,15 @@
+<br>
+<br>
+<br>  
+
+<div class="align: center"> 
+    <form [formGroup]="formdata" (ngSubmit)="validateOTP(formdata.value)" > 
+       <input type="text"  name="otp" placeholder="otp" formControlName = "otp"> 
+       <br/>
+       <br/>
+       <input type="submit" value="Validate"> 
+       <div *ngIf="isOTPGenerated">
+         {{otpSuccessMessage}}
+       </div>
+    </form>
+ </div> 
